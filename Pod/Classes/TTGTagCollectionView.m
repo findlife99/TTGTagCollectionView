@@ -99,7 +99,7 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     // Init layout
     TTGTagCollectionLayout *layout = [TTGTagCollectionLayout new];
     layout.sectionInset = UIEdgeInsetsZero;
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.minimumInteritemSpacing = _horizontalSpacing;
     layout.minimumLineSpacing = _verticalSpacing;
 
