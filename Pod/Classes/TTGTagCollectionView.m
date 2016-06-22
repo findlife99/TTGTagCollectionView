@@ -99,7 +99,7 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     // Init layout
     TTGTagCollectionLayout *layout = [TTGTagCollectionLayout new];
     layout.sectionInset = UIEdgeInsetsZero;
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.minimumInteritemSpacing = _horizontalSpacing;
     layout.minimumLineSpacing = _verticalSpacing;
 
@@ -109,6 +109,7 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     collectionView.delegate = self;
     collectionView.dataSource = self;
     collectionView.backgroundColor = [UIColor clearColor];
+    collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.translatesAutoresizingMaskIntoConstraints = NO;
 
     // Add constraint
