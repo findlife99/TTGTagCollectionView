@@ -40,6 +40,16 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame vertically:(BOOL)isVertically {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.isVertically = isVertically;
+        [self commonInit];
+    }
+
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
@@ -70,7 +80,7 @@
     _horizontalSpacing = 4.0f;
     _verticalSpacing = 4.0f;
 
-    _tagCollectionView = [TTGTagCollectionView new];
+    _tagCollectionView = [[TTGTagCollectionView alloc] initWithFrame:self.frame vertically:self.isVertically];
     _tagCollectionView.delegate = self;
     _tagCollectionView.dataSource = self;
     _tagCollectionView.translatesAutoresizingMaskIntoConstraints = NO;

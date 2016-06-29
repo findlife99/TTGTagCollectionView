@@ -32,6 +32,16 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame vertically:(BOOL)isVertically {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.isVertically = isVertically;
+        [self commonInit];
+    }
+
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
@@ -99,7 +109,7 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     // Init layout
     TTGTagCollectionLayout *layout = [TTGTagCollectionLayout new];
     layout.sectionInset = UIEdgeInsetsZero;
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.scrollDirection = self.isVertically ? UICollectionViewScrollDirectionVertical : UICollectionViewScrollDirectionHorizontal;
     layout.minimumInteritemSpacing = _horizontalSpacing;
     layout.minimumLineSpacing = _verticalSpacing;
 

@@ -38,5 +38,9 @@
 // Content height
 @property (assign, nonatomic, readonly) CGFloat contentHeight;
 
+@property (assign, nonatomic) BOOL isVertically;
+
+- (instancetype)initWithFrame:(CGRect)frame vertically:(BOOL)isVertically;
 - (void)reload;
+
 @end
