@@ -118,6 +118,7 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     [self addSubview:collectionView];
     collectionView.delegate = self;
     collectionView.dataSource = self;
+    collectionView.scrollsToTop = NO;
     collectionView.backgroundColor = [UIColor clearColor];
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.translatesAutoresizingMaskIntoConstraints = NO;
