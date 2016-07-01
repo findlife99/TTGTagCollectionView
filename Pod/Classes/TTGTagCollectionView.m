@@ -163,7 +163,6 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
         // Call back
         if ([_delegate respondsToSelector:@selector(tagCollectionView:updateContentHeight:)]) {
             [_delegate tagCollectionView:self updateContentHeight:contentSize.height];
-            NSLog(@"content height = %f", contentSize.height);
         }
     }
 }
