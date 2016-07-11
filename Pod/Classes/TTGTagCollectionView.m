@@ -95,6 +95,11 @@ static NSString *const TTGTagCollectionCellIdentifier = @"TTGTagCollectionCell";
     return size;
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return self.isVertically ? UIEdgeInsetsMake(0, 0, 10, 0) : UIEdgeInsetsZero;
+}
+
 #pragma mark - Private methods
 
 - (void)commonInit {
